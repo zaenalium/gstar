@@ -1,10 +1,13 @@
-gstar_est <- function(x, method, p, d, dt){
+gstar_est <- function(x, p, d, dt){
 
   x_base <- x
 
   if(d > 0) {
     x <- base::diff(x, lag = d)
     dt <- dt[-seq(d)]
+  } else {
+    x <- x
+    dt <- dt
   }
 
   city <- colnames(x)
@@ -28,8 +31,8 @@ gstar_est <- function(x, method, p, d, dt){
     MAPE_each <- apply(abs((z_mat - fitted_values) / z_mat),
                       2, function(x) mean(100*x))
   } else {
-    fitted_values <- matrix(z_hat, ncol = ncol(xt) ) + x_base[1:(nrow(x_base) - d - p),]
-    z_mat <-  matrix(x_base[1:(nrow(x_base) - d - p)] - z, ncol = ncol(xt) )
+    fitted_values <- matrix(z_hat, ncol = ncol(x_base) ) + x_base[1:(nrow(x_base) - d - p),]
+    z_mat <-  matrix(x_base[1:(nrow(x_base) - d - p)] - z, ncol = ncol(x_base) )
     MSE_total <- mean((fitted_values- z_mat)^2)
     MAPE_total <- mean(abs((c(z_mat) - c(fitted_values))/c(z_mat))) * 100
     MSE_each <- apply(z_mat- fitted_values, 2, function(x) mean(x^2))

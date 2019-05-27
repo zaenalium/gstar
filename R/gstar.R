@@ -58,7 +58,7 @@ gstar <- function(x, weight = "uniform",
 
 
 
- fit <-  gstar_est(x , method, p, d, dt)
+ fit <-  gstar_est(x , p, d, dt)
  class(fit) <- "gstar"
 
  fit
@@ -66,4 +66,5 @@ gstar <- function(x, weight = "uniform",
 }
 
 
-
+fit <-  gstar(x, weight = "uniform",
+              p = 2, d = 2, est = "OLS")
