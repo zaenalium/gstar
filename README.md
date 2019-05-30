@@ -1,6 +1,6 @@
 # gstar
 
-An R package to help you analyze data using Generalized Space-Time Autoregressive, this method is great to analyze time series data with spatial effect.
+An R package to help you analyze data using method Generalized Space-Time Autoregressive, this method is great to analyze multivariate time series data with spatial effect.
 
 ## Getting Started
 This package is still beta version, if you want to install it you can use devtools:install_github('zaenalium/gstar').
