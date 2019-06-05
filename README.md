@@ -16,11 +16,11 @@ Also please contact me if there is a bug in this package. I really appreciate if
 
 * **Ahmad Zaenal** - [zaenalium](https://github.com/zaenalium)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/zaenalium/gstar/contributors) who participated in this project.
 
 ## License
 
-This project is licensed under the GPL 2 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-2 | GPL-3 License - see the [DESCRIPTION](https://github.com/zaenalium/gstar/blob/master/DESCRIPTION) file for details
 
 ## Acknowledgments
 
