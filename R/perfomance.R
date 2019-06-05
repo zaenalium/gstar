@@ -1,9 +1,44 @@
-performance <- function(x, digits = max(3L, getOption("digits") - 3L), ...) {
-  cat("\nMSE for all data = ", x$MSE_total)
-  cat("\nMSE for each location : \n")
-  print(x$MSE_each)
-  cat("\nMAPE for all data = ", x$MAPE_total)
-  cat("\nMAPE for each location : \n")
-  print(x$MAPE_each)
-  cat("\n")
+performance <- function(model, digits = max(3L, getOption("digits") - 3L), testing = NULL ,...) {
+  if(is.null(testing)){
+    cat('----------Performance training------------\n')
+     cat("\nMSE for all data = ", model$MSE_total)
+    cat("\nMSE for each location : \n")
+    print(MSE_each)
+    cat("\nMAPE for all data = ", model$MAPE_total)
+    cat("\nMAPE for each location : \n")
+    print(model$MAPE_each)
+    cat("\n")
+  } else {
+    if(ncol(testing) != ncol(model$data)) {
+      "Number column testing and training data are not equal.\nPlease insert appropriate testing data!!"
+    }
+
+    cat('----------Performance training------------\n')
+    cat("\nMSE for all data = ", model$MSE_total)
+    cat("\nMSE for each location : \n")
+    print(MSE_each)
+    cat("\nMAPE for all data = ", model$MAPE_total)
+    cat("\nMAPE for each location : \n")
+    print(model$MAPE_each)
+    cat("\n")
+
+
+
+    fitted_values <- predict(model, nrow(testing))
+    z_mat <-  as.matrix(testing)
+    MSE_total <- mean((z_mat - fitted_values)^2)
+    MAPE_total <- mean(abs((c(as.matrix(z_mat - fitted_values)))/
+                             c(as.matrix(z_mat)))) * 100
+    MSE_each <- apply(z_mat - fitted_values, 2, function(x) mean(x^2))
+    MAPE_each <- apply(abs((z_mat - fitted_values) / z_mat),
+                       2, function(x) mean(100*x))
+
+    cat('----------Performance testing------------\n')
+    cat("\nMSE for all data = ", MSE_total)
+    cat("\nMSE for each location : \n")
+    print(MSE_each)
+    cat("\nMAPE for all data = ", MAPE_total)
+    cat("\nMAPE for each location : \n")
+    print(MAPE_each)
+  }
 }

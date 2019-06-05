@@ -1,26 +1,3 @@
-library(sp)
-library(reshape2)
-library(dplyr)
-library(readr)
-loc <- read.csv("R/location.csv")
-
-coordinates(loc) <- ~ latitude + longitude
-
-distance <- dist_gstar(coordinates(loc), method = "binary")
-
-df <- read.csv("R/data_IHK.csv")
-
-dist_gstar <- function(x, method = "euclidean"){
-  dist(x, method = method, diag = T, upper = T, p = 2)
-}
-W <- matrix(c(0,1,1,1,1,0,1,1,1,1,0,1,1,1,1,0),4,4)/3
-##problem
-#1. missing data
-
-x <- df
-p = 2; d = 0
-est = "OLS"; dmat = NULL; date_column = NULL
-weight = "uniform"
 gstar <- function(x, weight = "uniform",
                   p = 1, d = 0, est = "OLS", dmat = NULL, date_column = NULL) {
 
@@ -37,34 +14,32 @@ gstar <- function(x, weight = "uniform",
   EST <- c("OLS")
   match_est <- pmatch(est, EST)
   if (match_est == -1) stop("please insert correct estimation method")
+
   var_num <- sapply(x, is.numeric)
   if(sum(var_num) < 2 ) {
      stop("The data 'x' should contain at least two numeric variables. For univariate analysis consider ar() and arima() in package stats.\n")
   }
-  if(sum(!var_num) >= 2 ) {
-    stop("The data 'x' should contain maximum 1 Date Column")
+  if(sum(!var_num) >= 1 ) {
+    stop("The data 'x' should contain numeric data, if you need to the Date please convert it to 'xts' object or 'ts' object")
   }
   if(any(c(p,d) < 0 )){
     stop("The GSTAR order must be positive")
   }
 
-  if(is.null(date_column)){
-    dt <- as.Date(x[,  !var_num, drop = T])
+  if(any(class(x) %in% c("zoo", "xts", "ts"))){
+    x <- xts::as.xts(x)
+    dt <- zoo::index(x)
+    freq <- xts::periodicity(x)$scale
   } else {
-    dt <- as.Date(x[, date_column])
+    dt <- NULL
+    freq <- NULL
   }
-  input <- x
-  x <- as.matrix(x[, var_num])
 
+  x <- as.matrix(x)
 
-
- fit <-  gstar_est(x , p, d, dt)
+ fit <-  gstar_est(x , p, d, dt, freq)
  class(fit) <- "gstar"
 
  fit
 
 }
-
-
-fit <-  gstar(x, weight = "uniform",
-              p = 2, d = 2, est = "OLS")
