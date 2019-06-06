@@ -1,3 +1,11 @@
+#' Predicting the gstar model
+
+#' @description Predicted values based on gstar model object
+#' @usage predict(object, n)
+#' @param object an object of class "gstar".
+#' @param n The number of steps ahead for which prediction is required.
+#' @export predict.gstar
+
 predict.gstar <- function(model, n = NULL){
   fitted_values <- as.data.frame(model$fitted_values)
  # fitted_values$Date <- NULL

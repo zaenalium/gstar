@@ -1,3 +1,5 @@
+#' @export plot.gstar
+
 plot.gstar <- function(model, n_predict = NULL, testing  = NULL) {
       if(is.null(testing)) {
         if(is.null(n_predict)){

@@ -1,4 +1,4 @@
-gstar_est <- function(x, p, d, dt, freq){
+gstar_est <- function(x, W, p,d, dt, freq){
 
   x_base <- as.data.frame(x)
 
