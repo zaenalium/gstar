@@ -1,5 +1,6 @@
-#' @export print.gstar
 
+#' @import stats
+#' @export
 
 print.gstar <- function(x, digits = max(3L, getOption("digits") - 3L), ...) {
   cat(paste0("Model : GSTAR(",1,", ", x$p,", diff = ", x$d, ")\n\n"))

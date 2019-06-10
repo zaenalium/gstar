@@ -2,15 +2,17 @@
 % Please edit documentation in R/predict.R
 \name{predict.gstar}
 \alias{predict.gstar}
-\title{Predicting the gstar model}
+\title{Predicting the gstar object}
 \usage{
-predict(object, n)
+\method{predict}{gstar}(object, n = NULL, ...)
 }
 \arguments{
+\item{object}{an object of class "gstar".}
+
 \item{n}{The number of steps ahead for which prediction is required.}
 
-\item{object}{an object of class "gstar".}
+\item{...}{another arguments}
 }
 \description{
-Predicted values based on gstar model object
+Predicted values based on gstar object object
 }

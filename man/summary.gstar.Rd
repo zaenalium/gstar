@@ -4,13 +4,17 @@
 \alias{summary.gstar}
 \title{Summarizing Generalized Space-Time Autoregressive Fits}
 \usage{
-\method{summary}{gstar}(model, digits = max(3L, getOption("digits") -
-  3L), ...)
+\method{summary}{gstar}(object, ...)
 }
-\description{
-This function are simmilar with summary to "lm" or "glm" object.
+\arguments{
+\item{object}{an object of class "gstar".}
+
+\item{...}{another arguments
 \itemize{
 \item coefficients - a named vector of coefficients.
 \item AIC - A version of Akaike's An Information Criterion.
+}}
 }
+\description{
+This function are simmilar with summary to "lm" or "glm" object.
 }

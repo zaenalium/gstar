@@ -1,4 +1,3 @@
-
 pad_zero <- function(x, p) {
   n_col <- ncol(x)
   n_row <- nrow(x)
