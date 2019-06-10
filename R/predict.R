@@ -3,7 +3,7 @@
 #' @description Predicted values based on gstar object object
 #' @param object an object of class "gstar".
 #' @param n The number of steps ahead for which prediction is required.
-#' @param ... another arguments
+#' @param ... further arguments passed to or from other methods.
 
 #' @rdname predict.gstar
 #' @export

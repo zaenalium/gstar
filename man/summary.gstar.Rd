@@ -9,7 +9,7 @@
 \arguments{
 \item{object}{an object of class "gstar".}
 
-\item{...}{another arguments
+\item{...}{further arguments passed to or from other methods.
 \itemize{
 \item coefficients - a named vector of coefficients.
 \item AIC - A version of Akaike's An Information Criterion.

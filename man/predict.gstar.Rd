@@ -11,7 +11,7 @@
 
 \item{n}{The number of steps ahead for which prediction is required.}
 
-\item{...}{another arguments}
+\item{...}{further arguments passed to or from other methods.}
 }
 \description{
 Predicted values based on gstar object object

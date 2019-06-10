@@ -1,7 +1,7 @@
 #' Summarizing Generalized Space-Time Autoregressive Fits
 #' @description This function are simmilar with summary to "lm" or "glm" object.
 #' @param object an object of class "gstar".
-#' @param ... another arguments
+#' @param ... further arguments passed to or from other methods.
 #' \itemize{
 #' \item coefficients - a named vector of coefficients.
 #' \item AIC - A version of Akaike's An Information Criterion.
