@@ -4,14 +4,14 @@
 \alias{plot.gstar}
 \title{Plotting the gstar object}
 \usage{
-\method{plot}{gstar}(x, n_predict = NULL, testing = NULL, ...)
+\method{plot}{gstar}(x, testing = NULL, n_predict = NULL, ...)
 }
 \arguments{
 \item{x}{an object of class "gstar".}
 
-\item{n_predict}{The number of steps ahead for which prediction is required.}
-
 \item{testing}{The outsample or testing data to be plotted.}
+
+\item{n_predict}{The number of steps ahead for which prediction is required.}
 
 \item{...}{Other arguments}
 }

@@ -9,7 +9,7 @@
 #' @rdname plot.gstar
 #' @export
 
-plot.gstar <- function(x, n_predict = NULL, testing  = NULL, ...) {
+plot.gstar <- function(x, testing  = NULL, n_predict = NULL, ...) {
       if(is.null(testing)) {
         if(is.null(n_predict)){
           all_df <-  rbind(as.data.frame(x$data),

@@ -2,8 +2,9 @@ Package: gstar
 Type: Package
 Title: Generalized Space-Time Autoregressive Model
 Version: 0.0.0.9014
-Author: Ahmad Zaenal [aut, cre]
-Maintainer: Ahmad Zaenal <ahmadzaenal125@gmail.com>
+Authors@R: c(
+    person("Ahmad", "Zaenal", email = "ahmadzaenal125@gmail.com", role = c("aut", "cre")),
+    person("Fiqry", "Revadiansyah", email = "fiqryrevadiansyah@gmail.com", role = "aut"))
 Description: A package that can help you analyzing data using method Generalized Space-Time Autoregressive Model.
 Depends: R (>= 2.10), ggplot2
 Imports: dplyr, xts, zoo, reshape2

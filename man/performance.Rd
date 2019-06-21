@@ -4,13 +4,10 @@
 \alias{performance}
 \title{Calculate performance of prediction or forecasting}
 \usage{
-performance(object, digits = max(3L, getOption("digits") - 3L),
-  testing = NULL, ...)
+performance(object, testing = NULL, ...)
 }
 \arguments{
 \item{object}{an object of class "gstar".}
-
-\item{digits}{how many digit of the number output}
 
 \item{testing}{a dataframe or matrix or xts object that contain testing data (outsample data). \strong{Please be noted, if you use differencing in the model estimation, you do not need difference your data because we already cover that in this function}}
 

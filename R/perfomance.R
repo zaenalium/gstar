@@ -1,6 +1,5 @@
 #' Calculate performance of prediction or forecasting
 #' @param object an object of class "gstar".
-#' @param digits how many digit of the number output
 #' @param testing a dataframe or matrix or xts object that contain testing data (outsample data). \strong{Please be noted, if you use differencing in the model estimation, you do not need difference your data because we already cover that in this function}
 #' @param ... Other arguments
 #' @return
@@ -12,7 +11,8 @@
 #' @export
 
 
-performance <- function(object, digits = max(3L, getOption("digits") - 3L), testing = NULL ,...) {
+performance <- function(object, testing = NULL ,...) {
+  digits = max(3L, getOption("digits") - 3L)
   if(is.null(testing)){
     cat('----------Performance training------------\n')
      cat("\nMSE for all data = ", object$MSE_total)
@@ -30,7 +30,7 @@ performance <- function(object, digits = max(3L, getOption("digits") - 3L), test
     cat('----------Performance training------------\n')
     cat("\nMSE for all data = ", object$MSE_total)
     cat("\nMSE for each location : \n")
-    print(MSE_each)
+    print(object$MSE_each)
     cat("\nMAPE for all data = ", object$MAPE_total)
     cat("\nMAPE for each location : \n")
     print(object$MAPE_each)
