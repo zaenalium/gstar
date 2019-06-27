@@ -15,6 +15,7 @@ Also please contact me if there is a bug in this package. I really appreciate if
 ## Authors
 
 * **Ahmad Zaenal** - [zaenalium](https://github.com/zaenalium)
+* **Fiqry Revadiansyah** - [mrboneclinkz](https://github.com/mrboneclinkz)
 
 See also the list of [contributors](https://github.com/zaenalium/gstar/contributors) who participated in this project.
 

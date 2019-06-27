@@ -18,7 +18,7 @@ gstar(x, weight, p = 1, d = 0, est = "OLS")
 \item{est}{estimation method, currently only OLS available, another estimation will be added later.}
 }
 \value{
-gstar returns output like lm, use function \code{\link{summary}}to obtain the summary coefficients and others. The detail are shown in the following list :
+gstar returns output similar to lm, the detail are shown in the following list :
 \itemize{
 \item coefficients - a named vector of coefficients.
 \item AIC - A version of Akaike's An Information Criterion (the calculation similiar with aic in \emph{lm} method )}

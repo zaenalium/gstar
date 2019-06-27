@@ -7,7 +7,7 @@
 #' @param p an autoregressive order, value must be greater than 0.
 #' @param d a lag differencing order, value must be greater than 0.
 #' @param est estimation method, currently only OLS available, another estimation will be added later.
-#' @return gstar returns output like lm, use function \code{\link{summary}}to obtain the summary coefficients and others. The detail are shown in the following list :
+#' @return gstar returns output similar to lm, the detail are shown in the following list :
 #' \itemize{
 #' \item coefficients - a named vector of coefficients.
 #' \item AIC - A version of Akaike's An Information Criterion (the calculation similiar with aic in \emph{lm} method )}

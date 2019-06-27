@@ -4,7 +4,7 @@
 \name{Loc}
 \alias{Loc}
 \title{Coordinate of several region In Indonesia}
-\format{A timeseries data frame with 4 rows and 3 variables:
+\format{A data frame with 4 rows and 3 variables:
 \describe{
   \item{City}{Name of region/city}
   \item{lattitude}{The lattitude coordinate of each location}

@@ -16,5 +16,5 @@
 }}
 }
 \description{
-This function are simmilar with summary to "lm" or "glm" object.
+This function are simmilar to summary of "lm" or "glm" object.
 }

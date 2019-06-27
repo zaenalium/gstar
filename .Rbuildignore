@@ -4,3 +4,5 @@
 ^README\.md$
 ^\.Rhistory$
 ^R	esting\.R$
+^cran-comments\.md$
+^\.gitignore$

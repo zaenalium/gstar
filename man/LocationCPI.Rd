@@ -4,7 +4,7 @@
 \name{LocationCPI}
 \alias{LocationCPI}
 \title{Consumer Price Index (CPI) in several region In Indonesia}
-\format{A timeseries data frame with 105 rows and  5 variables:
+\format{A time series data frame with 105 rows and  5 variables:
 \describe{
   \item{Date}{date of CPI, monthly}
   \item{Purwokerto}{The CPI of Purwokerto region}
@@ -19,6 +19,6 @@
 data(LocationCPI)
 }
 \description{
-A dataset containing the Consumer Price Index (CPI) in several region In Indonesia i.e Semarang, Surakarta, Tegal and Purwokerto, it is timeseries data with monthly periodicity fromJan 2016 untill Sep 2014
+A dataset containing the Consumer Price Index (CPI) in several region In Indonesia i.e Semarang, Surakarta, Tegal and Purwokerto, it is time series data with monthly periodicity from Jan 2006 to Sep 2014
 }
 \keyword{datasets}

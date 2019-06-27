@@ -1,8 +1,8 @@
 #' Consumer Price Index (CPI) in several region In Indonesia
 #'
-#' A dataset containing the Consumer Price Index (CPI) in several region In Indonesia i.e Semarang, Surakarta, Tegal and Purwokerto, it is timeseries data with monthly periodicity fromJan 2016 untill Sep 2014
+#' A dataset containing the Consumer Price Index (CPI) in several region In Indonesia i.e Semarang, Surakarta, Tegal and Purwokerto, it is time series data with monthly periodicity from Jan 2006 to Sep 2014
 #' @usage data(LocationCPI)
-#' @format A timeseries data frame with 105 rows and  5 variables:
+#' @format A time series data frame with 105 rows and  5 variables:
 #' \describe{
 #'   \item{Date}{date of CPI, monthly}
 #'   \item{Purwokerto}{The CPI of Purwokerto region}
@@ -19,7 +19,7 @@
 #'
 #' A dataset containing the coordinate several region In Indonesia i.e Semarang, Surakarta, Tegal and Purwokerto.
 #' @usage data(Loc)
-#' @format A timeseries data frame with 4 rows and 3 variables:
+#' @format A data frame with 4 rows and 3 variables:
 #' \describe{
 #'   \item{City}{Name of region/city}
 #'   \item{lattitude}{The lattitude coordinate of each location}

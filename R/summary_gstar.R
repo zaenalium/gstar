@@ -1,5 +1,5 @@
 #' Summarizing Generalized Space-Time Autoregressive Fits
-#' @description This function are simmilar with summary to "lm" or "glm" object.
+#' @description This function are simmilar to summary of "lm" or "glm" object.
 #' @param object an object of class "gstar".
 #' @param ... further arguments passed to or from other methods.
 #' \itemize{
